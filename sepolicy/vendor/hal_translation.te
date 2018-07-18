@@ -1,0 +1,5 @@
+binder_call(hal_translation_client, hal_translation_server)
+binder_call(hal_translation_server, hal_translation_client)
+
+add_hwservice(hal_translation_server, hal_translation_hwservice)
+allow hal_translation_client hal_translation_hwservice:hwservice_manager find;

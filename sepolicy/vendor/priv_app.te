@@ -1,0 +1,1 @@
+allow priv_app sysfs_battery_supply:file r_file_perms;
