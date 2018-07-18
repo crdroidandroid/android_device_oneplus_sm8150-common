@@ -9,6 +9,8 @@ vendor.bluetooth.soc=cherokee
 
 # Camera
 vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.oneplus.factorymode,com.oneplus.camera,com.oneplus.healthcheck
+persist.vendor.camera.privapp.list=com.oneplus.camera
+persist.camera.privapp.list=com.oneplus.camera
 
 # Charger
 ro.charger.enable_suspend=true
