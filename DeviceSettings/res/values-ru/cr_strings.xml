@@ -59,4 +59,7 @@
 
     <string name="single_tap_gesture_title">Коснуться для активации</string>
     <string name="single_tap_gesture_summary">Активация экрана одним косанием</string>
+
+    <string name="audio_title">Звук</string>
+    <string name="dolby_title">Dolby Atmos</string>
 </resources>

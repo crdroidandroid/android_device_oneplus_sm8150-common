@@ -84,6 +84,18 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        android:key="audio"
+        android:title="@string/audio_title">
+        <Preference
+            android:key="audio_dolby_atmos"
+            android:title="@string/dolby_title">
+            <intent
+                 android:targetPackage="com.oneplus.sound.tuner"
+                 android:targetClass="com.oneplus.sound.tuner.panoramic.DolbyPanoramicSoundActivity" />
+        </Preference>
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="doze"
         android:title="@string/doze_category_title">
 
