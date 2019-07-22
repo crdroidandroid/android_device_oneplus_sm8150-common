@@ -65,4 +65,7 @@
     <string name="doze_category_title">Ambient display</string>
     <string name="single_tap_gesture_title">Single-tap</string>
     <string name="single_tap_gesture_summary">Pulse notifications and allow fingerprint unlock on tap</string>
+
+    <string name="audio_title">Audio</string>
+    <string name="dolby_title">Dolby Atmos</string>
 </resources>
