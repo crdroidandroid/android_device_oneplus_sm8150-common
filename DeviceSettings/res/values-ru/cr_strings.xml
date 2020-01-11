@@ -60,6 +60,11 @@
     <string name="single_tap_gesture_title">Коснуться для активации</string>
     <string name="single_tap_gesture_summary">Активация экрана одним косанием</string>
 
-    <string name="audio_title">Звук</string>
-    <string name="dolby_title">Dolby Atmos</string>
+
+    <string name="audio_title">Dolby Atmos</string>
+    <string name="dolby_title">Настройка</string>
+    <string name="dolby_summary">Настройка аудиовыхода на основе медиа-контента.</string>
+    <string name="enable_dolby_title">Включить/Выключить Dolby Atmos</string>
+    <string name="enable_dolby_summary">Переключение ТРЕБУЕТ перезагрузки для применения!</string>
+    <string name="enable_dolby_info">Примечание: С включённым Dolby Atmos другие EQ эффекты как MusicFX отключены на всех выходах.</string>
 </resources>

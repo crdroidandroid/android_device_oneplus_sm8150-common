@@ -66,6 +66,11 @@
     <string name="single_tap_gesture_title">Single-tap</string>
     <string name="single_tap_gesture_summary">Pulse notifications and allow fingerprint unlock on tap</string>
 
-    <string name="audio_title">Audio</string>
-    <string name="dolby_title">Dolby Atmos</string>
+
+    <string name="audio_title">Dolby Atmos</string>
+    <string name="dolby_title">Configuration</string>
+    <string name="dolby_summary">Configure the audio output based on media content.</string>
+    <string name="enable_dolby_title">Enable/Disable Dolby Atmos</string>
+    <string name="enable_dolby_summary">Switching REQUIRES a reboot to take effect!</string>
+    <string name="enable_dolby_info">Note: With Dolby Atmos enabled, other EQ effects like MusicFX are disabled on all outputs.</string>
 </resources>
