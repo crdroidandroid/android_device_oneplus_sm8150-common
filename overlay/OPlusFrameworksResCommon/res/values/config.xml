@@ -32,14 +32,29 @@
     <!-- Vibrator pattern for feedback about a long screen/key press -->
     <integer-array name="config_longPressVibePattern">
         <item>0</item>
-        <item>10</item>
+        <item>55</item>
     </integer-array>
 
     <!-- Vibrator pattern for feedback about touching a virtual key -->
     <integer-array name="config_virtualKeyVibePattern">
         <item>0</item>
-        <item>10</item>
+        <item>30</item>
     </integer-array>
+
+    <!-- The default intensity level for haptic feedback. See
+         Settings.System.HAPTIC_FEEDBACK_INTENSITY more details on the constant values and
+         meanings. -->
+    <integer name="config_defaultHapticFeedbackIntensity">3</integer>
+
+    <!-- The default intensity level for notification vibrations. See
+         Settings.System.NOTIFICATION_VIBRATION_INTENSITY more details on the constant values and
+         meanings. -->
+    <integer name="config_defaultNotificationVibrationIntensity">3</integer>
+
+    <!-- The default intensity level for ring vibrations. See
+         Settings.System.RING_VIBRATION_INTENSITY more details on the constant values and
+         meanings. -->
+    <integer name="config_defaultRingVibrationIntensity">3</integer>
 
     <!-- Indicate available ColorDisplayManager.COLOR_MODE_xxx. -->
     <integer-array name="config_availableColorModes" />
