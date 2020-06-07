@@ -92,6 +92,12 @@ ro.frp.pst=/dev/block/bootdevice/by-name/config
 # Gatekeeper
 vendor.gatekeeper.disable_spu=true
 
+# Google
+ro.vendor.build.release_type=release
+ro.vendor.build.real.device=true
+vendor.product.device=guacamole
+vendor.product.manufacturer=OPD
+
 # GPS
 persist.backup.ntpServer=0.pool.ntp.org
 

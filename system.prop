@@ -20,6 +20,10 @@ persist.debug.coresight.config=stm-events
 # DPM
 persist.vendor.dpm.feature=9
 
+# Google
+ro.opa.eligible_device=true
+ro.build.release_type=release
+
 # GPS
 persist.vendor.overlay.izat.optin=rro
 
