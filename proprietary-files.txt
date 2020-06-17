@@ -1559,8 +1559,8 @@ vendor/firmware/tp/LIMIT_19861_SY761_NEW.img
 # Translation
 lib/vendor.oneplus.hardware.translation@1.0.so
 lib64/vendor.oneplus.hardware.translation@1.0.so
-vendor/bin/hw/vendor.oneplus.hardware.translation@1.0-service
-vendor/etc/init/vendor.oneplus.hardware.translation@1.0-service.rc
+#vendor/bin/hw/vendor.oneplus.hardware.translation@1.0-service
+#vendor/etc/init/vendor.oneplus.hardware.translation@1.0-service.rc
 vendor/lib/vendor.oneplus.hardware.translation@1.0.so
 vendor/lib64/vendor.oneplus.hardware.translation@1.0.so
 
