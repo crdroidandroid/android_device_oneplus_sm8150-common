@@ -254,6 +254,7 @@ vendor/lib/libsnsapi.so
 vendor/lib/libsnsdiaglog.so
 vendor/lib/libSonyIMX471RmscLibrary.so
 vendor/lib/libstdc++.so
+vendor/lib/libyuv_watermark.so|ddf697dca4d6bc25bff74216458ff90d1d623886
 vendor/lib/libSuperSensor.so
 vendor/lib/libSuperSensorFallback.so
 vendor/lib/libSuperSensorProcessor.so
@@ -368,6 +369,7 @@ vendor/lib64/libSonyIMX471RmscLibrary.so
 vendor/lib64/libst_relighting.so
 vendor/lib64/libstblur_capture_api.so
 vendor/lib64/libstdc++.so
+vendor/lib64/libyuv_watermark.so|3539106acf5f1dfbef1636562c5d23c728115b99
 vendor/lib64/libSuperSensor.so
 vendor/lib64/libSuperSensorFallback.so
 vendor/lib64/libSuperSensorProcessor.so
