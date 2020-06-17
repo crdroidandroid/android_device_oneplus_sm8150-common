@@ -45,6 +45,7 @@
 /(vendor|system/vendor)/bin/hw/vendor\.oneplus\.hardware\.ifaa@2\.0-service                                       u:object_r:hal_ifaa_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.oneplus\.hardware\.param@1\.0-service                                      u:object_r:hal_param_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.oneplus\.hardware\.rpmb@1\.0-service                                       u:object_r:hal_rpmb_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.oneplus\.hardware\.translation@1\.0-service                                u:object_r:hal_translation_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.oneplus\.hardware\.wifi@1\.0-service                                       u:object_r:hal_wifi_default_exec:s0
 
 # Persist files

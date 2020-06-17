@@ -561,6 +561,16 @@
         <fqname>@1.0::IOneplusRpmb/default</fqname>
     </hal>
     <hal format="hidl">
+        <name>vendor.oneplus.hardware.translation</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IOneplusTranslation</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::IOneplusTranslation/default</fqname>
+    </hal>
+    <hal format="hidl">
         <name>vendor.oneplus.hardware.wifi</name>
         <transport>hwbinder</transport>
         <version>1.1</version>

@@ -143,6 +143,12 @@ product/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
 product/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
 
 # Camera
+framework/vendor.oneplus.camera.CameraMDMHIDL-V1.0-java.jar
+lib/vendor.oneplus.camera.CameraMDMHIDL@1.0-adapter-helper.so
+lib/vendor.oneplus.camera.CameraMDMHIDL@1.0.so
+lib64/libCameraMDMHelper.so
+lib64/vendor.oneplus.camera.CameraMDMHIDL@1.0-adapter-helper.so
+lib64/vendor.oneplus.camera.CameraMDMHIDL@1.0.so
 vendor/bin/hw/vendor.oneplus.camera.CameraHIDL@1.0-service
 vendor/bin/vl53l1_daemon_main
 vendor/etc/camera/arccali.bin
@@ -1547,6 +1553,14 @@ vendor/firmware/tp/LIMIT_19801_SY761.img
 vendor/firmware/tp/LIMIT_19801_SY761_NEW.img
 vendor/firmware/tp/LIMIT_19861_SY761.img
 vendor/firmware/tp/LIMIT_19861_SY761_NEW.img
+
+# Translation
+lib/vendor.oneplus.hardware.translation@1.0.so
+lib64/vendor.oneplus.hardware.translation@1.0.so
+vendor/bin/hw/vendor.oneplus.hardware.translation@1.0-service
+vendor/etc/init/vendor.oneplus.hardware.translation@1.0-service.rc
+vendor/lib/vendor.oneplus.hardware.translation@1.0.so
+vendor/lib64/vendor.oneplus.hardware.translation@1.0.so
 
 # Trusted User Interface
 vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti
