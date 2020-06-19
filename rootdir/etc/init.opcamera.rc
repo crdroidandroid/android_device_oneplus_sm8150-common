@@ -1,5 +1,5 @@
 on boot
-    mkdir /data/misc/crdroid 0770 cameraserver audio
-    write /data/misc/crdroid/client_package_name 0
-    chown cameraserver audio /data/misc/crdroid/client_package_name
-    chmod 0644 /data/misc/crdroid/client_package_name
+    mkdir /data/misc/lineage 0770 cameraserver audio
+    write /data/misc/lineage/client_package_name 0
+    chown cameraserver audio /data/misc/lineage/client_package_name
+    chmod 0644 /data/misc/lineage/client_package_name

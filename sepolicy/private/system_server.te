@@ -1,1 +1,1 @@
-allow system_server crdroid_data_file:file r_file_perms;
+allow system_server lineage_data_file:file r_file_perms;

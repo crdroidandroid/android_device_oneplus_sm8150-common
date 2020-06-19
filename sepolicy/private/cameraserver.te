@@ -1,2 +1,2 @@
-allow cameraserver crdroid_data_file:file rw_file_perms;
-allow cameraserver crdroid_data_file:dir write;
+allow cameraserver lineage_data_file:file rw_file_perms;
+allow cameraserver lineage_data_file:dir write;

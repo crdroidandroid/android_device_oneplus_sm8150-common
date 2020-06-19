@@ -9,4 +9,4 @@
 
 /sys/class/drm/sde-crtc-0/measured_fps u:object_r:sysfs_dm:s0
 
-/data/misc/crdroid/client_package_name                u:object_r:crdroid_data_file:s0
+/data/misc/lineage/client_package_name                u:object_r:lineage_data_file:s0
