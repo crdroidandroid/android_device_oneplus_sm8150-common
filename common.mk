@@ -345,6 +345,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     oplus-fwk
 
+# Perf
+PRODUCT_PACKAGES += \
+    libqti-perfd-client
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti
