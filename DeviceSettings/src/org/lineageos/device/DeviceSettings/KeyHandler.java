@@ -51,7 +51,6 @@ import android.provider.Settings;
 import android.util.Log;
 import android.util.SparseIntArray;
 import android.view.KeyEvent;
-import android.widget.Toast;
 
 import com.android.internal.os.DeviceKeyHandler;
 import com.android.internal.util.ArrayUtils;
@@ -76,6 +75,7 @@ public class KeyHandler implements DeviceKeyHandler {
     static {
         sSupportedSliderZenModes.put(Constants.KEY_VALUE_TOTAL_SILENCE, Settings.Global.ZEN_MODE_NO_INTERRUPTIONS);
         sSupportedSliderZenModes.put(Constants.KEY_VALUE_SILENT, Settings.Global.ZEN_MODE_OFF);
+
         sSupportedSliderZenModes.put(Constants.KEY_VALUE_PRIORTY_ONLY, Settings.Global.ZEN_MODE_IMPORTANT_INTERRUPTIONS);
         sSupportedSliderZenModes.put(Constants.KEY_VALUE_VIBRATE, Settings.Global.ZEN_MODE_OFF);
         sSupportedSliderZenModes.put(Constants.KEY_VALUE_NORMAL, Settings.Global.ZEN_MODE_OFF);
@@ -87,14 +87,11 @@ public class KeyHandler implements DeviceKeyHandler {
         sSupportedSliderRingModes.put(Constants.KEY_VALUE_NORMAL, AudioManager.RINGER_MODE_NORMAL);
     }
 
-    private static Toast mToast;
-
     public static final String CLIENT_PACKAGE_NAME = "com.oneplus.camera";
     public static final String CLIENT_PACKAGE_PATH = "/data/misc/lineage/client_package_name";
 
     private final Context mContext;
     private final Context mResContext;
-    private final Context mSysUiContext;
     private final PowerManager mPowerManager;
     private final NotificationManager mNotificationManager;
     private final AudioManager mAudioManager;
@@ -127,7 +124,6 @@ public class KeyHandler implements DeviceKeyHandler {
     public KeyHandler(Context context) {
         mContext = context;
         mResContext = getResContext(context);
-        mSysUiContext = ActivityThread.currentActivityThread().getSystemUiContext();        
         mHandler = new Handler(Looper.getMainLooper());
         mDispOn = true;
         mPowerManager = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
@@ -238,46 +234,29 @@ public class KeyHandler implements DeviceKeyHandler {
         doHapticFeedback();
 
         int positionValue = 0;
-        String toastText;
         Resources res = mResContext.getResources();
         int key = sSupportedSliderRingModes.keyAt(
                 sSupportedSliderRingModes.indexOfKey(keyCodeValue));
         switch (key) {
             case Constants.KEY_VALUE_TOTAL_SILENCE: // DND - no int'
-                toastText = res.getString(R.string.slider_toast_dnd);
                 positionValue = Constants.MODE_TOTAL_SILENCE;
                 break;
             case Constants.KEY_VALUE_SILENT: // Ringer silent
-                toastText = res.getString(R.string.slider_toast_silent);
                 positionValue = Constants.MODE_SILENT;
                 break;
             case Constants.KEY_VALUE_PRIORTY_ONLY: // DND - priority
-                toastText = res.getString(R.string.slider_toast_priority);
                 positionValue = Constants.MODE_PRIORITY_ONLY;
                 break;
             case Constants.KEY_VALUE_VIBRATE: // Ringer vibrate
-                toastText = res.getString(R.string.slider_toast_vibrate);
                 positionValue = Constants.MODE_VIBRATE;
                 break;
             default:
             case Constants.KEY_VALUE_NORMAL: // Ringer normal DND off
-                toastText = res.getString(R.string.slider_toast_normal);
                 positionValue = Constants.MODE_RING;
                 break;
         }
 
         sendUpdateBroadcast(position, positionValue);
-
-        Handler handler = new Handler(Looper.getMainLooper());
-        handler.post(new Runnable() {
-            @Override
-            public void run() {
-                if (mToast != null) mToast.cancel();
-                mToast = Toast.makeText(
-                        mSysUiContext, toastText, Toast.LENGTH_SHORT);
-                mToast.show();
-            }
-        });
 
         return null;
     }
