@@ -9,3 +9,6 @@ ro.bpf.kver_override=5.10.239
 
 # Display
 ro.surface_flinger.has_wide_color_display=true
+
+# Disable MTE Async for system server
+persist.arm64.memtag.system_server=off
