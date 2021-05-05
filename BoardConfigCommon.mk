@@ -83,6 +83,7 @@ BOARD_KERNEL_CMDLINE := \
     androidboot.memcg=1 \
     androidboot.usbcontroller=a600000.dwc3 \
     androidboot.vbmeta.avb_version=1.0 \
+    kpti=off \
     loop.max_part=7 \
     lpm_levels.sleep_disabled=1 \
     msm_rtb.filter=0x237 \
