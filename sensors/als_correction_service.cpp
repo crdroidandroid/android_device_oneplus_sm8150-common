@@ -21,95 +21,94 @@
 
 #include <cstdio>
 #include <signal.h>
-#include <time.h>
 #include <unistd.h>
+#include <sysutils/FrameworkCommand.h>
+#include <sysutils/FrameworkListener.h>
+#include <utils/Timers.h>
 
 using android::base::SetProperty;
-using android::gui::ScreenCaptureResults;
-using android::ui::PixelFormat;
-using android::DisplayCaptureArgs;
 using android::GraphicBuffer;
 using android::Rect;
 using android::ScreenshotClient;
 using android::sp;
 using android::SurfaceComposerClient;
-using android::SyncScreenCaptureListener;
+using namespace android;
 
-constexpr int ALS_RADIUS = 64;
-constexpr int SCREENSHOT_INTERVAL = 1;
+static Rect screenshot_rect(251, 988, 305, 1042);
 
-void updateScreenBuffer() {
-    static time_t lastScreenUpdate = 0;
-    static sp<GraphicBuffer> outBuffer = new GraphicBuffer(
-            10, 10, android::PIXEL_FORMAT_RGB_888,
-            GraphicBuffer::USAGE_SW_READ_OFTEN | GraphicBuffer::USAGE_SW_WRITE_OFTEN);
+class TakeScreenshotCommand : public FrameworkCommand {
+  public:
+    TakeScreenshotCommand() : FrameworkCommand("take_screenshot") {}
+    ~TakeScreenshotCommand() override = default;
 
-    struct timespec now;
-    clock_gettime(CLOCK_MONOTONIC, &now);
-
-    if (now.tv_sec - lastScreenUpdate >= SCREENSHOT_INTERVAL) {
-        // Update Screenshot at most every second
-        DisplayCaptureArgs captureArgs;
-        captureArgs.displayToken = SurfaceComposerClient::getInternalDisplayToken();
-        captureArgs.pixelFormat = PixelFormat::RGBA_8888;
-        captureArgs.sourceCrop = Rect(
-                ALS_POS_X - ALS_RADIUS, ALS_POS_Y - ALS_RADIUS,
-                ALS_POS_X + ALS_RADIUS, ALS_POS_Y + ALS_RADIUS);
-        captureArgs.width = ALS_RADIUS * 2;
-        captureArgs.height = ALS_RADIUS * 2;
-        captureArgs.useIdentityTransform = true;
-        captureArgs.captureSecureLayers = true;
-        sp<SyncScreenCaptureListener> captureListener = new SyncScreenCaptureListener();
-        if (ScreenshotClient::captureDisplay(captureArgs, captureListener) == android::NO_ERROR) {
-            ScreenCaptureResults captureResults = captureListener->waitForResults();
-            if (captureResults.result == android::NO_ERROR) {
-                outBuffer = captureResults.buffer;
-            }
-        }
-        lastScreenUpdate = now.tv_sec;
+    int runCommand(SocketClient* cli, int /*argc*/, char **/*argv*/) {
+        auto screenshot = takeScreenshot();
+        cli->sendData(&screenshot, sizeof(screenshot_t));
+        return 0;
     }
-
-    uint8_t *out;
-    auto resultWidth = outBuffer->getWidth();
-    auto resultHeight = outBuffer->getHeight();
-    auto stride = outBuffer->getStride();
-
-    outBuffer->lock(GraphicBuffer::USAGE_SW_READ_OFTEN, reinterpret_cast<void **>(&out));
-    // we can sum this directly on linear light
-    uint32_t rsum = 0, gsum = 0, bsum = 0;
-    for (int y = 0; y < resultHeight; y++) {
-        for (int x = 0; x < resultWidth; x++) {
-            rsum += out[y * (stride * 4) + x * 4];
-            gsum += out[y * (stride * 4) + x * 4 + 1];
-            bsum += out[y * (stride * 4) + x * 4 + 2];
-        }
-    }
-    uint32_t max = 255 * resultWidth * resultHeight;
-    SetProperty("vendor.sensors.als_correction.r", std::to_string(rsum * 0x7FFFFFFFuLL / max));
-    SetProperty("vendor.sensors.als_correction.g", std::to_string(gsum * 0x7FFFFFFFuLL / max));
-    SetProperty("vendor.sensors.als_correction.b", std::to_string(bsum * 0x7FFFFFFFuLL / max));
-    outBuffer->unlock();
-}
-
-int main() {
-    android::ProcessState::self()->setThreadPoolMaxThreadCount(0);
-    android::ProcessState::self()->startThreadPool();
-
-    struct sigaction action{};
-    sigfillset(&action.sa_mask);
-
-    action.sa_flags = SA_RESTART;
-    action.sa_handler = [](int signal) {
-        if (signal == SIGUSR1) {
-            updateScreenBuffer();
-        }
+  private:
+    struct screenshot_t {
+        uint32_t r, g, b;
+        nsecs_t timestamp;
     };
 
-    if (sigaction(SIGUSR1, &action, nullptr) == -1) {
-        return -1;
-    }
+    screenshot_t takeScreenshot() {
+        static sp<GraphicBuffer> outBuffer = new GraphicBuffer(
+                screenshot_rect.getWidth(), screenshot_rect.getHeight(),
+                android::PIXEL_FORMAT_RGB_888,
+                GraphicBuffer::USAGE_SW_READ_OFTEN | GraphicBuffer::USAGE_SW_WRITE_OFTEN);
 
-    SetProperty("vendor.sensors.als_correction.pid", std::to_string(getpid()));
+        sp<SyncScreenCaptureListener> captureListener = new SyncScreenCaptureListener();
+        gui::ScreenCaptureResults captureResults;
+
+        DisplayCaptureArgs captureArgs;
+        captureArgs.displayToken = SurfaceComposerClient::getInternalDisplayToken();
+        captureArgs.pixelFormat = android::ui::PixelFormat::RGBA_8888;
+        captureArgs.sourceCrop = screenshot_rect;
+        captureArgs.width = screenshot_rect.getWidth();
+        captureArgs.height = screenshot_rect.getHeight();
+        captureArgs.useIdentityTransform = false;
+        status_t ret = ScreenshotClient::captureDisplay(captureArgs, captureListener);
+        if (ret == NO_ERROR) {
+            captureResults = captureListener->waitForResults();
+            if (captureResults.result == NO_ERROR)  outBuffer = captureResults.buffer;
+        }
+
+        uint8_t *out;
+        auto resultWidth = outBuffer->getWidth();
+        auto resultHeight = outBuffer->getHeight();
+        auto stride = outBuffer->getStride();
+
+        outBuffer->lock(GraphicBuffer::USAGE_SW_READ_OFTEN, reinterpret_cast<void **>(&out));
+        // we can sum this directly on linear light
+        uint32_t rsum = 0, gsum = 0, bsum = 0;
+        for (int y = 0; y < resultHeight; y++) {
+            for (int x = 0; x < resultWidth; x++) {
+                rsum += out[y * (stride * 4) + x * 4];
+                gsum += out[y * (stride * 4) + x * 4 + 1];
+                bsum += out[y * (stride * 4) + x * 4 + 2];
+            }
+        }
+        uint32_t max = resultWidth * resultHeight;
+        outBuffer->unlock();
+
+        return { rsum / max, gsum / max, bsum / max, systemTime(SYSTEM_TIME_BOOTTIME) };
+    }
+};
+
+class AlsCorrectionListener : public FrameworkListener {
+  public:
+    AlsCorrectionListener() : FrameworkListener("als_correction") {
+        registerCmd(new TakeScreenshotCommand);
+    }
+};
+
+int main() {
+    ProcessState::self()->setThreadPoolMaxThreadCount(0);
+    ProcessState::self()->startThreadPool();
+
+    auto listener = new AlsCorrectionListener();
+    listener->startListener();
 
     while (true) {
         pause();

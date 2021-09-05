@@ -671,8 +671,8 @@ void HalProxy::postEventsToMessageQueue(const std::vector<Event>& eventsList, si
     }
     std::vector<Event> events(eventsList);
     for (auto& event : events) {
-        if (static_cast<int>(event.sensorType) == SENSOR_TYPE_QTI_WISE_LIGHT) {
-            AlsCorrection::correct(event.u.scalar);
+        if (static_cast<int>(event.sensorType) == SENSOR_TYPE_QTI_HARDWARE_LIGHT) {
+            AlsCorrection::process(event);
         }
     }
     if (mPendingWriteEventsQueue.empty()) {
