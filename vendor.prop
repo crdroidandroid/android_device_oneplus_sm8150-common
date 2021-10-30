@@ -147,6 +147,7 @@ vendor.gatekeeper.disable_spu=true
 # Graphics
 debug.graphics.game_default_frame_rate.disabled=true
 debug.sf.enable_transaction_tracing=false
+debug.sf.latch_unsignaled=0
 debug.sf.enable_gl_backpressure=0
 debug.sf.predict_hwc_composition_strategy=0
 persist.sys.sf.color_saturation=1.0
