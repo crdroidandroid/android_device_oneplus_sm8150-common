@@ -58,6 +58,9 @@ TARGET_PRODUCT_PROP += $(VENDOR_PATH)/product.prop
 TARGET_SYSTEM_PROP += $(VENDOR_PATH)/system.prop
 TARGET_VENDOR_PROP += $(VENDOR_PATH)/vendor.prop
 
+# Treble
+PRODUCT_FULL_TREBLE_OVERRIDE := true
+
 # A/B
 AB_OTA_UPDATER := true
 
