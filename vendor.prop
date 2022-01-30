@@ -172,6 +172,10 @@ ro.surface_flinger.wcg_composition_dataspace=143261696
 persist.vendor.pps.disallowed=1
 persist.vendor.hvdcp_opti.disallowed=1
 
+# HWUI
+debug.hwui.use_hint_manager=true
+debug.hwui.target_cpu_time_percent=30
+
 # Incremental FS
 ro.incremental.enable=yes
 
