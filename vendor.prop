@@ -165,6 +165,10 @@ ro.surface_flinger.set_touch_timer_ms=4000
 ro.surface_flinger.use_color_management=true
 ro.surface_flinger.wcg_composition_dataspace=143261696
 
+# HWUI
+debug.hwui.use_hint_manager=true
+debug.hwui.target_cpu_time_percent=30
+
 # Incremental FS
 ro.incremental.enable=yes
 
