@@ -20,8 +20,13 @@
     <string name="retry">Повторить</string>
     <string name="warning">Предупреждение</string>
     <string name="free_fall_detected_title">Обнаружено свободное падение</string>
-    <string name="free_fall_detected_message">Фронтальная камера была опущена для ее защиты. Хотите снова использовать фронтальную камеру?</string>
-    <string name="motor_cannot_go_down_message">Невозможно убрать фронтальную камеру. Пожалуйста, убедитесь, что нет препятствий</string>
-    <string name="motor_cannot_go_up_message">Невозможно выдвинуть фронтальную камеру. Пожалуйста, убедитесь, что нет препятствий</string>
-    <string name="motor_press_message">Нажатие на фронтальную камеру может привести к повреждению двигателя. Пожалуйста, избегайте этого.</string>
+    <string name="free_fall_detected_message">Передняя камера была опущена для ее защиты. Хотите снова использовать переднюю камеру?</string>
+    <string name="motor_cannot_go_down_message">Невозможно убрать переднюю камеру. Пожалуйста, убедитесь, что нет препятствий</string>
+    <string name="motor_cannot_go_up_message">Невозможно выдвинуть переднюю камеру. Пожалуйста, убедитесь, что нет препятствий</string>
+    <string name="motor_press_message">Нажатие на переднюю камеру может привести к повреждению двигателя. Пожалуйста, избегайте этого.</string>
+
+    <!-- Popup camera dialog -->
+    <string name="popup_camera_dialog_message">Разрешаете открыть переднюю камеру?</string>
+    <string name="popup_camera_dialog_no">Нет</string>
+    <string name="popup_camera_dialog_raise">Да</string>
 </resources>
