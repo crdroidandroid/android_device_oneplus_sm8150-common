@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2014-2017 The OmniROM Project
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources>
+    <string name="device_title">Настройки OnePlus</string>
+    <string name="device_summary">Дополнительные настройки специфичные для OnePlus</string>
+
+    <!-- Display modes -->
+    <string name="display_title">Режимы отображения</string>
+    <string name="display_summary">Настройка параметров и предпочтений отображения</string>
+    <string name="srgb_mode_summary"></string>
+    <string name="srgb_mode_title">Натуральные цвета</string>
+    <string name="hbm_mode_summary"></string>
+    <string name="hbm_mode_title">Режим высокой яркости</string>
+    <string name="hbm_autobrightness_summary"></string>
+    <string name="hbm_autobrightness_title">Авто режим высокой яркости</string>
+    <string name="hbm_autobrightness_threshold_summary"></string>
+    <string name="hbm_autobrightness_threshold_title">Порог включения режима высокой яркости (люкс)</string>
+    <string name="dc_mode_summary"></string>
+    <string name="dc_mode_title">DC-затемнение</string>
+    <string name="dci_mode_summary"></string>
+    <string name="dci_mode_title_new">Яркие цвета</string>
+    <string name="Night_mode_summary"></string>
+    <string name="Night_mode_title">Ночной режим</string>
+    <string name="panel_category_title">Режимы экрана</string>
+    <string name="panel_category_summary">Режимы цветовой коррекции экрана</string>
+    <string name="off_mode_title">Выкл.</string>
+    <string name="tile_panel_mode">Режимы экрана</string>
+    <string name="tile_hbm_mode">Режимы высокой яркости</string>
+    <string name="tile_dc_mode">DC-затемнение</string>
+    <string name="panel_mode_info">Выключение режима экрана требует перезагрузки.</string>
+
+    <!-- Notification slider -->
+    <string name="notification_slider_category_title">Боковой переклячатель уведомлений</string>
+    <string name="notification_slider_selection_dialog_title">Поведение</string>
+    <string name="notification_slider_top_position">Верхнее положение</string>
+    <string name="notification_slider_middle_position">Среднее положение</string>
+    <string name="notification_slider_bottom_position">Нижнее положение</string>
+    <string name="notification_slider_mode_total_silence">Полная тишина</string>
+    <string name="notification_slider_mode_alarms_only">Только будильники</string>
+    <string name="notification_slider_mode_priority_only">Только важные</string>
+    <string name="notification_slider_mode_silent">Без звука</string>
+    <string name="notification_slider_mode_vibrate">Вибрация</string>
+    <string name="notification_slider_mode_none">Обычное</string>
+    <string name="buttons_dashboard_summary">Настройки бокового переключателя</string>
+
+    <!-- Vibration control -->
+    <string name="category_vibrator">Вибрация</string>
+    <string name="vib_strength_title_head">Общесистемная</string>
+    <string name="vib_strength_summary_head">Установка интенсивности общей вибрации</string>
+    <string name="vib_call_strength_title_head">Вызовы</string>
+    <string name="vib_call_strength_summary_head">Установка интенсивности вибрации звонка</string>
+    <string name="vib_notif_strength_title_head">Уведомления</string>
+    <string name="vib_notif_strength_summary_head">Установка интенсивности вибрации уведомлений</string>
+
+    <!-- Pop cam -->
+    <string name="camera_title">Камера</string>
+    <string name="always_on_camera_dialog_title">Запрос открытия передней камеры</string>
+    <string name="always_on_camera_dialog_summary_on">Всегда спрашивайть перед открытием</string>
+    <string name="always_on_camera_dialog_summary_off">Спрашивать если экран выключен</string>
+
+</resources>
