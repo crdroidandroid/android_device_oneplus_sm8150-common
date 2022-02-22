@@ -36,6 +36,6 @@ allow hal_fingerprint_default sysfs_fpc:file r_file_perms;
 # Allow hal_fingerprint_default to get vendor_adsprpc_prop
 get_prop(hal_fingerprint_default, vendor_adsprpc_prop)
 
-allow hal_fingerprint_default sysfs_livedisplay_tuneable:file { read write };
+allow hal_fingerprint_default sysfs_livedisplay_tuneable:file rw_file_perms;
 allow hal_fingerprint_default vendor_sysfs_battery_supply:dir search;
 allow hal_fingerprint_default vendor_sysfs_battery_supply:file r_file_perms;
