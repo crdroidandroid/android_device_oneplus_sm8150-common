@@ -123,4 +123,7 @@
          available on some devices. -->
     <bool name="config_enableHapticTextHandle">true</bool>
 
+    <!-- Screen off UDFPS -->
+    <bool name="config_supportScreenOffUdfps">true</bool>
+
 </resources>
