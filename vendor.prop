@@ -181,6 +181,7 @@ ro.lmk.kill_timeout_ms=15
 
 # Media
 debug.stagefright.c2inputsurface=-1
+vendor.media.omx=0
 
 # Netflix
 ro.netflix.bsp_rev=Q855-16947-1
