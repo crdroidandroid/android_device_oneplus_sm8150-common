@@ -273,7 +273,8 @@ PRODUCT_PACKAGES += \
     FrameworksResTarget \
     OPlusFrameworksResCommon \
     OPlusSystemUIResCommon \
-    OPlusExtrasResCommon
+    OPlusExtrasResCommon \
+    SimpleDeviceConfigCommon
 
 # Power
 PRODUCT_PACKAGES += \
