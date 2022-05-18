@@ -10,3 +10,6 @@ allow camera_helper_app mnt_vendor_file:dir search;
 r_dir_file(camera_helper_app, vendor_persist_engineer_file)
 rw_dir_file(camera_helper_app, sysfs_motor)
 rw_dir_file(camera_helper_app, system_app_data_file)
+
+dontaudit camera_helper_app system_data_file:dir search;
+dontaudit camera_helper_app user_profile_root_file:dir search;
