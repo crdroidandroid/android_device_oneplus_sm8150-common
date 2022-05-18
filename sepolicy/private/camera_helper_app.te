@@ -7,3 +7,6 @@ allow camera_helper_app cameraserver_service:service_manager find;
 
 rw_dir_file(camera_helper_app, sysfs_motor)
 rw_dir_file(camera_helper_app, system_app_data_file)
+
+dontaudit camera_helper_app system_data_file:dir search;
+dontaudit camera_helper_app user_profile_root_file:dir search;
