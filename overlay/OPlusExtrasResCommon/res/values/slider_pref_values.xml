@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2022 The Evolution X Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+
+    <!-- Sys vibration integers (default, min, max) -->
+    <integer-array name="vibrator_strength_preference_array">
+        <item>3</item>
+        <item>0</item>
+        <item>4</item>
+    </integer-array>
+    <integer name="vibrator_strength_preference_interval">1</integer>
+
+    <!-- Vibration test pattern (1, 2) -->
+    <integer-array name="test_vibration_pattern">
+        <item>0</item>
+        <item>300</item>
+    </integer-array>
+
+</resources>
