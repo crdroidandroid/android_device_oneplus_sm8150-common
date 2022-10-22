@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2022 The Evolution X Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+
+    <!-- FSync sysfs node path, true, false -->
+    <string name="node_fsync_mode_switch">/sys/module/sync/parameters/fsync_enabled</string>
+    <string name="node_fsync_mode_switch_true">Y</string>
+    <string name="node_fsync_mode_switch_false">N</string>
+
+    <!-- TP Edge Limit procfs node path, true, false -->
+    <string name="node_tp_edge_limit_mode_switch">/proc/touchpanel/oplus_tp_direction</string>
+    <string name="node_tp_edge_limit_mode_switch_true">1</string>
+    <string name="node_tp_edge_limit_mode_switch_false">0</string>
+
+    <!-- USB-OTG sysfs node path, true, false -->
+    <string name="node_otg_mode_switch">/sys/class/power_supply/usb/otg_switch</string>
+    <string name="node_otg_mode_switch_true">1</string>
+    <string name="node_otg_mode_switch_false">0</string>
+
+    <!-- USB 2.0 Force fastcharge sysfs node path, true, false -->
+    <string name="node_usb2_fast_charge_mode_switch">/sys/module/oplus_charger/parameters/force_fast_charge</string>
+    <string name="node_usb2_fast_charge_mode_switch_true">1</string>
+    <string name="node_usb2_fast_charge_mode_switch_false">0</string>
+
+    <!-- System vibration sysfs node path -->
+    <string name="node_vibrator_strength_preference">/sys/devices/platform/soc/89c000.i2c/i2c-2/2-005a/leds/vibrator/level</string>
+
+</resources>

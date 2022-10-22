@@ -1,0 +1,21 @@
+on boot
+
+    # Force Fast Charge
+    chown system system /sys/module/oplus_charger/parameters/force_fast_charge
+    chmod 0660 /sys/module/oplus_charger/parameters/force_fast_charge
+
+    # Fsync Switch
+    chown system system /sys/module/sync/parameters/fsync_enabled
+    chmod 0660 /sys/module/sync/parameters/fsync_enabled
+
+    # USB-OTG
+    chown system /sys/class/power_supply/usb/otg_switch
+    chmod 0660 /sys/class/power_supply/usb/otg_switch
+
+    # Vibration Intensity
+    chown system system /sys/devices/platform/soc/89c000.i2c/i2c-2/2-005a/leds/vibrator/level
+    chmod 0660 /sys/devices/platform/soc/89c000.i2c/i2c-2/2-005a/leds/vibrator/level
+
+    # TP Edge Touch Limit
+    chown system system /proc/touchpanel/oplus_tp_direction
+    write /proc/touchpanel/oplus_tp_direction 0
