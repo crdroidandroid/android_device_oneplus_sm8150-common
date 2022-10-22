@@ -41,7 +41,7 @@
         <item>/system/lib64/libsurfaceflinger.so</item>
     </string-array>
 
-     <!-- List of biometric sensors on the device, in decreasing strength. Consumed by AuthService
+    <!-- List of biometric sensors on the device, in decreasing strength. Consumed by AuthService
           when registering authenticators with BiometricService. Format must be ID:Modality:Strength,
           where: IDs are unique per device, Modality as defined in BiometricAuthenticator.java,
           and Strength as defined in Authenticators.java -->
@@ -51,4 +51,16 @@
 
     <!-- Enable Zram writeback feature to allow unused pages in zram be written to flash. -->
     <bool name="config_zramWriteback">true</bool>
+
+    <!-- Whether device has physical tri state switch -->
+    <bool name="config_hasAlertSlider">true</bool>
+
+    <!-- The location of the devices physical tri state switch
+         0: Left side
+         1: Right side -->
+    <integer name="config_alertSliderLocation">1</integer>
+
+    <!-- Whether key handler sends intent when changing slider position -->
+    <string name="config_alertSliderIntent">org.lineageos.settings.slider.UPDATE_SLIDER_POSITION</string>
+
 </resources>
