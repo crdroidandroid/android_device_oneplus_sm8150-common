@@ -1,0 +1,3 @@
+allow vendor_poweroffalarm_app property_socket:sock_file write;
+allow vendor_poweroffalarm_app init:unix_stream_socket connectto;
+allow vendor_poweroffalarm_app system_prop:property_service set;
