@@ -1,0 +1,17 @@
+[
+  {
+    "repository": "crdroidandroid/android_hardware_oneplus",
+    "target_path": "hardware/oneplus",
+    "branch": "13.0-hotdogg"
+  },
+  {
+    "repository": "crdroidandroid/android_kernel_oneplus_sm8150",
+    "target_path": "kernel/oneplus/sm8150",
+    "branch": "13.0-hotdogg"
+  },
+  {
+    "repository": "crdroidandroid/proprietary_vendor_oneplus_sm8150-common",
+    "target_path": "vendor/oneplus/sm8150-common",
+    "branch": "13.0-hotdogg"
+  }
+]
