@@ -109,6 +109,9 @@ on post-fs
 on late-fs
     mount_all /vendor/etc/fstab.qcom --late
 
+on post-fs-data
+    mkdir /data/vendor/audio/ultrasound 0770 audioserver audio
+
 on early-boot
     start vendor.sensors
 
