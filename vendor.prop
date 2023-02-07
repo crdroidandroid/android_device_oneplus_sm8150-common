@@ -124,6 +124,7 @@ vendor.audio.dolby.ds2.hardbypass=true
 
 # Display
 debug.sf.disable_client_composition_cache=1
+debug.sf.enable_transaction_tracing=false
 vendor.display.comp_mask=0
 vendor.display.dataspace_saturation_matrix=1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0
 vendor.display.disable_decimation=1
