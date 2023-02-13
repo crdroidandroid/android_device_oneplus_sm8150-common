@@ -446,6 +446,9 @@
     <!-- Whether to disable assist hint on lockscreen -->
     <bool name="config_disableAssistHintOnLockscreen">true</bool>
 
-     <!-- How long it takes for the HW to start illuminating after the illuminati -->
-     <integer name="config_udfps_illumination_transition_ms">0</integer>
+    <!-- How long it takes for the HW to start illuminating after the illuminati -->
+    <integer name="config_udfps_illumination_transition_ms">0</integer>
+
+    <!-- Whether the device supports Smart Pixels -->
+    <bool name="config_supportSmartPixels">true</bool>
 </resources>
