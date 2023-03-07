@@ -124,10 +124,6 @@ on boot
     setprop vendor.usb.qdss.inst.name "qdss"
     setprop vendor.usb.controller a600000.dwc3
 
-# Smart charging
-    chown system system /sys/class/power_supply/battery/input_suspend
-    chmod 0660 /sys/class/power_supply/battery/input_suspend
-
 on property:vendor.display.lcd_density=560
    setprop dalvik.vm.heapgrowthlimit 256m
 
