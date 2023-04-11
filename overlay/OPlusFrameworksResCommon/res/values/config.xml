@@ -117,4 +117,7 @@
          fp screen off unlock-->
     <bool name="config_screen_off_udfps_default_on">false</bool>
 
+    <!-- If true, the display will be shifted around in ambient mode. -->
+    <bool name="config_enableBurnInProtection">true</bool>
+
 </resources>
