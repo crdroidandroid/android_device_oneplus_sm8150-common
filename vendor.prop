@@ -126,6 +126,7 @@ persist.backup.ntpServer=0.pool.ntp.org
 debug.egl.hw=0
 debug.mdpcomp.logs=0
 debug.sf.hw=0
+debug.sf.enable_transaction_tracing=false
 debug.sf.latch_unsignaled=1
 debug.sf.use_phase_offsets_as_durations=1
 debug.sf.late.sf.duration=10500000
