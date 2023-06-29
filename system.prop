@@ -7,6 +7,9 @@ ro.audio.monitorRotation=true
 bt.max.hfpclient.connections=1
 vendor.bluetooth.soc=cherokee
 
+# Blur
+persist.sys.sf.disable_blurs=1
+
 # Charger
 ro.charger.enable_suspend=true
 
