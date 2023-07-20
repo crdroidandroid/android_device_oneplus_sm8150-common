@@ -101,4 +101,7 @@
 
     <!-- Default component for QR code scanner -->
     <string name="config_defaultQrCodeComponent" translatable="false"></string>
+
+    <!-- Maximum strength, in percentage, supported by bright color reduction. -->
+    <integer name="config_reduceBrightColorsStrengthMax">120</integer>
 </resources>
