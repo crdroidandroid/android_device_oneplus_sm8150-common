@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- List of SKUs where Secure NFC functionality is supported -->
+    <string-array name="config_skuSupportsSecureNfc">
+        <item>pn553</item>
+    </string-array>
+</resources>
