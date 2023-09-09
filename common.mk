@@ -61,6 +61,7 @@ PRODUCT_COPY_FILES += \
     $(AUDIO_HAL_DIR)/configs/msmnile/audio_tuning_mixer.txt:$(TARGET_COPY_OUT_VENDOR)/etc/audio_tuning_mixer.txt \
     $(AUDIO_HAL_DIR)/configs/msmnile/graphite_ipc_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/graphite_ipc_platform_info.xml \
     $(LOCAL_PATH)/configs/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
+    $(LOCAL_PATH)/configs/audio/audio_effects.xml:$(TARGET_COPY_OUT_ODM)/etc/audio_effects.xml \
     $(LOCAL_PATH)/configs/audio/audio_io_policy.conf:$(TARGET_COPY_OUT_ODM)/etc/audio_io_policy.conf \
     $(LOCAL_PATH)/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
     $(LOCAL_PATH)/configs/audio/audio_policy_configuration_a2dp_offload_disabled.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration_a2dp_offload_disabled.xml \
@@ -78,6 +79,22 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.low_latency.xml \
     frameworks/native/data/etc/android.hardware.audio.pro.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.pro.xml \
     frameworks/native/data/etc/android.software.midi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.midi.xml
+
+# Dolby Manager
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/dolby/multimedia_dolby_dax_default.xml:$(TARGET_COPY_OUT_ODM)/etc/dolby/multimedia_dolby_dax_default.xml \
+    $(LOCAL_PATH)/configs/media/media_codecs_dolby_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_dolby_audio.xml
+
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.vendor.dolby.dax.version=DAX3_3.6.0.12_r1 \
+    ro.vendor.dolby.model=PAFM00 \
+    ro.vendor.dolby.device=OP46C3 \
+    ro.vendor.dolby.manufacturer=OPLUS \
+    ro.vendor.dolby.brand=OPLUS \
+    vendor.dolby.dap.param.tee=true
+
+PRODUCT_PACKAGES += \
+    DolbyManager
 
 # Authsecret
 PRODUCT_PACKAGES += \
