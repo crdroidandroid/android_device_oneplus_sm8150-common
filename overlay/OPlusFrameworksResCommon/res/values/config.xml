@@ -132,4 +132,7 @@
     <string-array name="config_postNotificationIgnoredApps" translatable="false">
         <item>com.oneplus.camera</item>
     </string-array>
+
+    <!-- Enable face auth only when swiping security view -->
+    <bool name="config_faceAuthOnlyOnSecurityView">true</bool>
 </resources>
