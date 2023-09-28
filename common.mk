@@ -500,6 +500,10 @@ PRODUCT_BOOT_JARS += \
 # Blur
 TARGET_ENABLE_BLUR := true
 
+# Thermal
+PRODUCT_PACKAGES += \
+    android.hardware.thermal@2.0-service.qti
+
 # Inherit from the OnePlus Camera makefile.
 $(call inherit-product, vendor/oneplus/sm8150-apps/camera-vendor.mk)
 
