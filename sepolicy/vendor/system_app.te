@@ -2,3 +2,4 @@ allow system_app proc_pagetypeinfo:file r_file_perms;
 
 # Camera
 allow system_app sysfs_leds:dir search;
+dontaudit system_app vendor_hal_cameraMDM_hwservice:hwservice_manager find;
