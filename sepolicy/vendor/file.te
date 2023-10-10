@@ -6,3 +6,6 @@ type vendor_sysfs_iio, fs_type, sysfs_type;
 
 # Oppo NV
 type opponvitem_file, file_type;
+
+# Procfs
+type proc_last_kmsg, fs_type, proc_type;
