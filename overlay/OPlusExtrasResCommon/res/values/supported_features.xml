@@ -11,9 +11,6 @@
     <!-- Whether device supports Per-App ColorSpace -->
     <bool name="config_deviceSupportsPerAppColorSpace">true</bool>
 
-    <!-- Whether device supports DC-dimming -->
-    <bool name="config_deviceSupportsDCdimming">true</bool>
-
     <!-- Whether device supports Power Efficient Workqueue -->
     <bool name="config_deviceSupportsPowerEfficientWorkqueue">true</bool>
 

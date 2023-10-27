@@ -5,11 +5,6 @@
 -->
 <resources>
 
-    <!-- DC-dimming sysfs node path, true, false -->
-    <string name="node_dc_mode_switch">/sys/kernel/oplus_display/dimlayer_bl_en</string>
-    <string name="node_dc_mode_switch_true">1 0</string>
-    <string name="node_dc_mode_switch_false">0 0</string>
-
     <!-- Power Efficient Workqueue sysfs node path, true, false -->
     <string name="node_power_efficient_workqueue_mode_switch">/sys/module/workqueue/parameters/power_efficient</string>
     <string name="node_power_efficient_workqueue_mode_switch_true">Y</string>

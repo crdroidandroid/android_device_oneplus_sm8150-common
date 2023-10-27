@@ -1,7 +1,4 @@
 on boot
-    # DC-Dimming
-    chown system system /sys/kernel/oplus_display/dimlayer_bl_en
-    chmod 0660 /sys/kernel/oplus_display/dimlayer_bl_en
 
     # Force Fast Charge
     chown system system /sys/module/oplus_charger/parameters/force_fast_charge
