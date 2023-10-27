@@ -7,3 +7,6 @@ on init
     # HBM
     chown system system /sys/kernel/oplus_display/hbm
     chmod 0660 /sys/kernel/oplus_display/hbm
+    # DC-Dimming
+    chown system system /sys/kernel/oplus_display/dimlayer_bl_en
+    chmod 0660 /sys/kernel/oplus_display/dimlayer_bl_en
