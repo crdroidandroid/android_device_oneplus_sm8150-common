@@ -38,7 +38,6 @@ vendor.mm.enable.qcom_parser=4044018
 # Netmgr
 persist.data.df.agg.dl_pkt=10
 persist.data.df.agg.dl_size=4096
-persist.vendor.data.mode=concurrent
 
 # Radio
 ril.subscription.types=NV,RUIM
