@@ -1,8 +1,5 @@
 allow platform_app sysfs_graphics:file r_file_perms;
 
-# Dolby
-get_prop(platform_app, audio_config_prop)
-
 # Camera
 typeattribute platform_app hal_camera_client;
 allow platform_app oem_service:service_manager find;
