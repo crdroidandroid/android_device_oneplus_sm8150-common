@@ -6,7 +6,7 @@
   {
     "repository": "crdroidandroid/android_hardware_oplus",
     "target_path": "hardware/oplus",
-    "branch": "13.0-extras"
+    "branch": "14.0-extras"
   },
   {
     "repository": "crdroidandroid/proprietary_vendor_oneplus_sm8150-common",
@@ -15,7 +15,7 @@
   {
     "repository" : "crdroidandroid/proprietary_vendor_oneplus_camera",
     "target_path": "vendor/oneplus/sm8150-apps",
-    "branch"     : "13.0-op7",
+    "branch"     : "14.0-op7",
     "remote"     : "crdroid-gitlab"
   }
 ]
