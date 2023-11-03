@@ -185,12 +185,6 @@ service vendor.thermal-engine /vendor/bin/thermal-engine
    group root
 
 
-service vendor.lowi /vendor/bin/sscrpcd
-   class core
-   user system
-   group system wakelock
-   capabilities BLOCK_SUSPEND
-
 service vendor.mdm_helper /vendor/bin/mdm_helper
     class core
     group system wakelock
