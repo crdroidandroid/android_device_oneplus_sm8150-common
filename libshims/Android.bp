@@ -1,0 +1,6 @@
+
+cc_library_shared {
+    name: "lib-wfdshim",
+    system_ext_specific: true,
+    srcs: ["lib-wfdshim.cpp"],
+}

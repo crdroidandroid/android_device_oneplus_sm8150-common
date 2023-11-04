@@ -72,6 +72,15 @@ function blob_fixup() {
         system_ext/lib64/libwfdnative.so)
             sed -i "s/android.hidl.base@1.0.so/libhidlbase.so\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00/" "${2}"
             ;;
+        system_ext/lib64/libwfdnative.so)
+            grep -q lib-wfdshim.so "${2}" || "${PATCHELF}" --add-needed "lib-wfdshim.so" "${2}"
+            ;;
+        system_ext/lib/libwfdservice.so )
+            grep -q lib-wfdshim.so "${2}" || "${PATCHELF}" --add-needed "lib-wfdshim.so" "${2}"
+            ;;
+        system_ext/lib/libwfdmmsrc_system.so )
+            grep -q lib-wfdshim.so "${2}" || "${PATCHELF}" --add-needed "lib-wfdshim.so" "${2}"
+            ;;
         vendor/lib64/hw/camera.qcom.so)
             grep -q libcamera_metadata_shim.so "${2}" || "${PATCHELF}" --add-needed "libcamera_metadata_shim.so" "${2}"
             ;;
