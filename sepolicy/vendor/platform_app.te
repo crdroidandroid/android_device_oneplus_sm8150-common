@@ -13,3 +13,5 @@ rw_dir_file(platform_app, vendor_sysfs_battery_supply)
 binder_call(platform_app, hal_camera_default)
 binder_call(platform_app, vendor_hal_cameraMDM_default)
 dontaudit platform_app mnt_vendor_file:dir search;
+allow platform_app sysfs_net:dir search;
+allow platform_app sysfs_net:file { open read };
