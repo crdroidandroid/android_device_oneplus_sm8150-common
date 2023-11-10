@@ -11,11 +11,5 @@
   {
     "repository": "crdroidandroid/proprietary_vendor_oneplus_sm8150-common",
     "target_path": "vendor/oneplus/sm8150-common"
-  },
-  {
-    "repository" : "crdroidandroid/proprietary_vendor_oneplus_camera",
-    "target_path": "vendor/oneplus/sm8150-apps",
-    "branch"     : "14.0-op7",
-    "remote"     : "crdroid-gitlab"
   }
 ]
