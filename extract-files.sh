@@ -69,9 +69,6 @@ function blob_fixup() {
         product/etc/sysconfig/com.android.hotwordenrollment.common.util.xml)
             sed -i "s/\/my_product/\/product/" "${2}"
             ;;
-        system_ext/lib64/libwfdnative.so)
-            sed -i "s/android.hidl.base@1.0.so/libhidlbase.so\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00/" "${2}"
-            ;;
         vendor/etc/libnfc-nxp.conf)
             sed -i "/NXP_NFC_DEV_NODE/ s/pn553/nq-nci/" "${2}"
             ;;
