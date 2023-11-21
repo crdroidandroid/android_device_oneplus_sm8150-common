@@ -97,9 +97,6 @@
          Choices are: FULL, NORMAL, OFF. -->
     <string name="db_wal_sync_mode" translatable="false">OFF</string>
 
-    <!-- Default component for QR code scanner -->
-    <string name="config_defaultQrCodeComponent" translatable="false"></string>
-
     <!-- Maximum strength, in percentage, supported by bright color reduction. -->
     <integer name="config_reduceBrightColorsStrengthMax">120</integer>
 
@@ -112,5 +109,4 @@
 
     <!-- Defines custom Vendor sensor for pocket detection. -->
     <string name="config_pocketJudgeVendorSensorName">oneplus.sensor.proximity</string>
-
 </resources>
