@@ -39,7 +39,7 @@
         <item>/system/framework/services.jar</item>
         <item>/apex/com.android.media/javalib/updatable-media.jar</item>
         <item>/system/lib64/libsurfaceflinger.so</item>
-	</string-array>
+    </string-array>
 
      <!-- List of biometric sensors on the device, in decreasing strength. Consumed by AuthService
           when registering authenticators with BiometricService. Format must be ID:Modality:Strength,
@@ -49,4 +49,6 @@
         <item>0:2:15</item>
     </string-array>
 
+    <!-- Enable Zram writeback feature to allow unused pages in zram be written to flash. -->
+    <bool name="config_zramWriteback">true</bool>
 </resources>
