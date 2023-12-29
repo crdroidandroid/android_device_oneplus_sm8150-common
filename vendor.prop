@@ -170,6 +170,10 @@ ro.surface_flinger.wcg_composition_dataspace=143261696
 # Incremental FS
 ro.incremental.enable=yes
 
+# LMKD/PSI
+ro.lmk.kill_heaviest_task=true
+ro.lmk.kill_timeout_ms=15
+
 # Media
 debug.stagefright.c2inputsurface=-1
 
