@@ -5,7 +5,3 @@ ro.boot.hardware.sku=pn553
 ro.zram.first_wb_delay_mins=1440
 ro.zram.mark_idle_delay_mins=60
 ro.zram.periodic_wb_delay_hours=24
-
-# lmkd
-ro.lmk.thrashing_limit=200
-ro.lmk.psi_partial_stall_ms=120
