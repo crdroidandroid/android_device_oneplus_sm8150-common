@@ -163,6 +163,16 @@ ro.surface_flinger.wcg_composition_dataspace=143261696
 # Incremental FS
 ro.incremental.enable=yes
 
+# LMKD/PSI
+ro.lmk.use_psi=true
+ro.lmk.low=1001
+ro.lmk.medium=800
+ro.lmk.critical=0
+ro.lmk.critical_upgrade=true
+ro.lmk.upgrade_pressure=40
+ro.lmk.downgrade_pressure=60
+ro.lmk.kill_heaviest_task=false
+
 # Media
 debug.stagefright.ccodec=4
 debug.stagefright.omx_default_rank=0
