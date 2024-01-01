@@ -1,2 +1,5 @@
 # KernelSU
 dontaudit kernel self:capability dac_read_search;
+
+# Dolby
+allow kernel self:capability kill;
