@@ -783,9 +783,6 @@ vendor/lib64/libOmxVpp.so
 vendor/lib64/libOmxWmaDec.so
 vendor/lib64/libswvdec.so
 
-# Perf
-vendor/etc/powerhint.xml
-
 # Peripheral manager
 vendor/bin/pm-proxy
 vendor/bin/pm-service
