@@ -2,3 +2,7 @@ allow system_app proc_pagetypeinfo:file r_file_perms;
 
 # For devices that not in Pixel series, add dummy domain and let it return null by selinux denial
 dontaudit system_app hal_dummy_googlebattery_service:service_manager find;
+
+# Camera
+allow system_app sysfs_leds:dir search;
+dontaudit system_app vendor_hal_cameraMDM_hwservice:hwservice_manager find;

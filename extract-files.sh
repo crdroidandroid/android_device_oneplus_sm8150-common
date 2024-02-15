@@ -84,6 +84,12 @@ function blob_fixup() {
         vendor/lib64/libdlbdsservice.so | vendor/lib64/libstagefright_soft_ac4dec.so | vendor/lib64/libstagefrightdolby.so)
             ${PATCHELF} --replace-needed "libstagefright_foundation.so" "libstagefright_foundation-v33.so" "${2}"
             ;;
+        vendor/lib64/hw/com.qti.chi.override.so)
+            grep -q libcamera_metadata_shim.so "${2}" || "${PATCHELF}" --add-needed "libcamera_metadata_shim.so" "${2}"
+            ;;
+        vendor/lib64/hw/camera.qcom.so )
+            sed -i "s/com.oem.autotest/\x00om.oem.autotest/" "${2}"
+            ;;
     esac
 }
 

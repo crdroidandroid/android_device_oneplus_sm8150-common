@@ -1,0 +1,2 @@
+hal_client_domain(cameraserver, vendor_hal_cameraMDM)
+binder_call(cameraserver, vendor_hal_cameraMDM_default)

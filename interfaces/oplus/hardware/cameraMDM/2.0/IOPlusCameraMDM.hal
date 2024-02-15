@@ -1,0 +1,13 @@
+package vendor.oplus.hardware.cameraMDM@2.0;
+
+interface IOPlusCameraMDM {
+    setCameraId(int32_t id) generates (bool status);
+    setPackageName(string packageName) generates (bool status);
+    getPackageName() generates (string packageName);
+    file_access(string path) generates (bool status);
+    file_close(int32_t fd) generates (bool status);
+    file_delete(string path) generates (bool status);
+    file_open(string path) generates (int32_t fd);
+    file_read(int32_t fd, int32_t size) generates (bool status, vec<int8_t> buffer, int32_t size);
+    file_write(int32_t fd, vec<int8_t> buffer, int32_t size) generates (bool status);
+};
