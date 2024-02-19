@@ -13,10 +13,6 @@ on fs
     write /proc/touchpanel/tp_fw_update 0
 
 on early-boot
-    # Dolby
-    mkdir /data/vendor/dolby 0770 media media
-    mkdir /data/vendor/multimedia 0775 system system
-
     # Radio
     exec_start oplus-sh
     setprop persist.radio.multisim.config ${vendor.radio.multisim.config}
@@ -56,12 +52,6 @@ on boot
     # Ultrasound
     chmod 0666 /dev/audio_ultrasound
     chmod 0666 /dev/sensor_ultrasound
-
-    # RIL
-    mkdir /data/opponvitems 0771 radio radio
-    write /proc/sys/fs/suid_dumpable 1
-    chmod 0664 /dev/mdmreason
-    chown system system /dev/mdmreason
 
 on property:ro.boot.prjname=*
     # Display

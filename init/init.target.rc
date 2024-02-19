@@ -99,6 +99,9 @@ on fs
     restorecon_recursive /mnt/vendor/persist
     mkdir /mnt/vendor/persist/data 0700 system system
 
+    # RIL
+    mkdir /data/opponvitems 0771 radio radio
+
 on post-fs
     # set RLIMIT_MEMLOCK to 64MB
     setrlimit 8 67108864 67108864
@@ -110,6 +113,9 @@ on late-fs
 
 on early-boot
     start vendor.sensors
+    # Dolby
+    mkdir /data/vendor/dolby 0770 media media
+    mkdir /data/vendor/multimedia 0775 system system
 
 on boot
     chown system system /sys/kernel/qvr_external_sensor/fd
