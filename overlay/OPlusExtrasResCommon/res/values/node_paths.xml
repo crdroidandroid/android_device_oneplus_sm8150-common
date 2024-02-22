@@ -5,11 +5,6 @@
 -->
 <resources>
 
-    <!-- Power Efficient Workqueue sysfs node path, true, false -->
-    <string name="node_power_efficient_workqueue_mode_switch">/sys/module/workqueue/parameters/power_efficient</string>
-    <string name="node_power_efficient_workqueue_mode_switch_true">Y</string>
-    <string name="node_power_efficient_workqueue_mode_switch_false">N</string>
-
     <!-- FSync sysfs node path, true, false -->
     <string name="node_fsync_mode_switch">/sys/module/sync/parameters/fsync_enabled</string>
     <string name="node_fsync_mode_switch_true">Y</string>
