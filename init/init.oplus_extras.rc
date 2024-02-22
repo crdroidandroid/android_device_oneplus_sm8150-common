@@ -20,9 +20,6 @@ on boot
     chown system system /sys/devices/platform/soc/89c000.i2c/i2c-2/2-005a/leds/vibrator/level
     chmod 0660 /sys/devices/platform/soc/89c000.i2c/i2c-2/2-005a/leds/vibrator/level
 
-    # Hyper Touch
-    chown system system /proc/touchpanel/game_switch_enable
-
     # TP Edge Touch Limit
     chown system system /proc/touchpanel/oplus_tp_direction
     write /proc/touchpanel/oplus_tp_direction 0

@@ -17,9 +17,6 @@
     <!-- Whether device supports FPS overlay -->
     <bool name="config_deviceSupportsFPS">true</bool>
 
-    <!-- Whether device supports GameMode -->
-    <bool name="config_deviceSupportsGameMode">true</bool>
-
     <!-- Whether device supports TP Edge Limit -->
     <bool name="config_deviceSupportsTPEdgeLimit">true</bool>
 
