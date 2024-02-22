@@ -106,7 +106,7 @@ BOARD_RAMDISK_USE_LZ4 := true
 TARGET_KERNEL_CLANG_VERSION := latest
 TARGET_KERNEL_LLVM_BINUTILS := 1
 TARGET_KERNEL_ARCH := arm64
-TARGET_KERNEL_CONFIG := lineage_sm8150_defconfig vendor/debugfs.config
+TARGET_KERNEL_CONFIG := lineage_sm8150_defconfig
 TARGET_KERNEL_SOURCE := kernel/oneplus/sm8150
 
 # Kernel modules - Audio
