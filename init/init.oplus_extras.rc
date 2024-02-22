@@ -12,10 +12,6 @@ on boot
     chown system graphics /sys/class/drm/sde-crtc-0/measured_fps
     chmod 0660 /sys/class/drm/sde-crtc-0/measured_fps
 
-    # Power Efficient Workqueue
-    chown system system /sys/module/workqueue/parameters/power_efficient
-    chmod 0660 /sys/module/workqueue/parameters/power_efficient
-
     # USB-OTG
     chown system /sys/class/power_supply/usb/otg_switch
     chmod 0660 /sys/class/power_supply/usb/otg_switch
