@@ -990,9 +990,6 @@ vendor/etc/init/init.time_daemon.rc
 vendor/lib64/libtime_genoff.so
 
 # Touchscreen firmware
-odm/firmware/tp/18115/FW_S3706_SAMSUNG.img
-odm/firmware/tp/18115/FW_S3706_SAMSUNG_FAE.img
-odm/firmware/tp/18115/LIMIT_S3706_SAMSUNG.img
 odm/firmware/tp/18821/FW_S6SY761_SAMSUNG.bin
 odm/firmware/tp/18821/FW_S6SY761_SAMSUNG_FAE.bin
 odm/firmware/tp/18821/LIMIT_S6SY761_SAMSUNG.img
