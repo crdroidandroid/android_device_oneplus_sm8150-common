@@ -1,4 +1,2 @@
-allow rild opponvitem_file:dir create_dir_perms;
-allow rild opponvitem_file:file create_file_perms;
 dontaudit rild cache_file:lnk_file r_file_perms;
 dontaudit rild default_prop:file r_file_perms;
