@@ -39,14 +39,20 @@
         <item>/system/framework/services.jar</item>
         <item>/apex/com.android.media/javalib/updatable-media.jar</item>
         <item>/system/lib64/libsurfaceflinger.so</item>
-	</string-array>
+    </string-array>
 
-     <!-- List of biometric sensors on the device, in decreasing strength. Consumed by AuthService
+    <!-- List of biometric sensors on the device, in decreasing strength. Consumed by AuthService
           when registering authenticators with BiometricService. Format must be ID:Modality:Strength,
           where: IDs are unique per device, Modality as defined in BiometricAuthenticator.java,
           and Strength as defined in Authenticators.java -->
     <string-array name="config_biometric_sensors" translatable="false" >
         <item>0:2:15</item>
     </string-array>
+
+    <!-- Flag indicating whether the surfaceflinger has limited
+         alpha compositing functionality in hardware.  If set, the window
+         manager will disable alpha trasformation in animations where not
+         strictly needed. -->
+    <bool name="config_sf_limitedAlpha">true</bool>
 
 </resources>
