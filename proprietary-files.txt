@@ -576,10 +576,10 @@ vendor/gpu/kbc/unified_ksqs.bin|8f77dc004796d58acb959e78f4994c5d6b90baef
 
 # Graphics (Adreno) - from quest 2
 vendor/lib/egl/eglSubDriverAndroid.so|49ddfe3d40aaac87ba48466168272e965a02e15a
-vendor/lib/egl/libEGL_adreno.so|c909588673a5134fd59b966c19ac4ee93fbecd27
+vendor/lib/egl/libEGL_adreno.so;SYMLINK=vendor/lib/libEGL_adreno.so|c909588673a5134fd59b966c19ac4ee93fbecd27
 vendor/lib/egl/libGLESv1_CM_adreno.so|ed7885be5b538cf3d886660065d8248fa5df510b
-vendor/lib/egl/libGLESv2_adreno.so|61ebf15874f74e17c57925f2ce26a8a520178dff
-vendor/lib/egl/libq3dtools_adreno.so|4e5bf16190e5d652272a71f20992c8a0c577cfd4
+vendor/lib/egl/libGLESv2_adreno.so;SYMLINK=vendor/lib/libGLESv2_adreno.so|61ebf15874f74e17c57925f2ce26a8a520178dff
+vendor/lib/egl/libq3dtools_adreno.so;SYMLINK=vendor/lib/libq3dtools_adreno.so|4e5bf16190e5d652272a71f20992c8a0c577cfd4
 vendor/lib/egl/libq3dtools_esx.so|3a28d5ab31161d4faeee6d9c8960df460952e51f
 vendor/lib/hw/vulkan.adreno.so|390ea7e8be24d99346f9862240b699c08ef25cb8
 vendor/lib/libC2D2.so|9c04b0a4469e98ab4b1b66c36dcc1a6594b320fd
@@ -599,10 +599,10 @@ vendor/lib/libllvm-glnext.so|af2bc94921c86fe74686c9145aba4ffdea2e0e45
 vendor/lib/libllvm-qcom.so|1f4448771949b5ced6c2292f714a9e0f30116821
 vendor/lib/libllvm-qgl.so|24e8836e0f5efde9d293f50b6e5817293e955262
 vendor/lib64/egl/eglSubDriverAndroid.so|7b38b38cc28348be8eb5304e279d2c09f8de7e6d
-vendor/lib64/egl/libEGL_adreno.so|f2ac492400441e7168c7f9438836397f54d2c631
+vendor/lib64/egl/libEGL_adreno.so;SYMLINK=vendor/lib64/libEGL_adreno.so|f2ac492400441e7168c7f9438836397f54d2c631
 vendor/lib64/egl/libGLESv1_CM_adreno.so|2474562b88d817d46a2512acdc5d5afb807ce166
-vendor/lib64/egl/libGLESv2_adreno.so|927177138df3b48514e63ea9ac757abfcca874be
-vendor/lib64/egl/libq3dtools_adreno.so|3533d568aababe4b1293fab17411ad98462f27a1
+vendor/lib64/egl/libGLESv2_adreno.so;SYMLINK=vendor/lib64/libGLESv2_adreno.so|927177138df3b48514e63ea9ac757abfcca874be
+vendor/lib64/egl/libq3dtools_adreno.so;SYMLINK=vendor/lib64/libq3dtools_adreno.so|3533d568aababe4b1293fab17411ad98462f27a1
 vendor/lib64/egl/libq3dtools_esx.so|50dcb885d3e6493ce28c62e9f6a446cc1d6991b1
 vendor/lib64/hw/vulkan.adreno.so|264d0f067b613fd80528673ee542421ff641e6f1
 vendor/lib64/libC2D2.so|6b6de841497d59bed38875e1715ae66c33fe29d2
