@@ -8,10 +8,6 @@ on boot
     chown system system /sys/module/sync/parameters/fsync_enabled
     chmod 0660 /sys/module/sync/parameters/fsync_enabled
 
-    # Measured FPS
-    chown system graphics /sys/class/drm/sde-crtc-0/measured_fps
-    chmod 0660 /sys/class/drm/sde-crtc-0/measured_fps
-
     # USB-OTG
     chown system /sys/class/power_supply/usb/otg_switch
     chmod 0660 /sys/class/power_supply/usb/otg_switch
