@@ -183,13 +183,8 @@ debug.hwui.target_cpu_time_percent=30
 ro.incremental.enable=yes
 
 # LMKD/PSI
-ro.lmk.low=1001
-ro.lmk.medium=800
-ro.lmk.critical=0
-ro.lmk.critical_upgrade=true
-ro.lmk.upgrade_pressure=40
-ro.lmk.downgrade_pressure=60
-ro.lmk.kill_heaviest_task=false
+ro.lmk.kill_heaviest_task=true
+ro.lmk.kill_timeout_ms=15
 
 # Media
 debug.stagefright.ccodec=4
