@@ -1,6 +1,3 @@
-# Secure NFC
-ro.boot.hardware.sku=pn553
-
 # Zram
 ro.zram.first_wb_delay_mins=1440
 ro.zram.mark_idle_delay_mins=60
