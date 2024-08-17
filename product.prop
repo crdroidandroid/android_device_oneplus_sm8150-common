@@ -1,2 +1,5 @@
 # Audio
 af.fast_track_multiplier=1
+
+# Display
+ro.surface_flinger.has_wide_color_display=true
