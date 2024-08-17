@@ -3,3 +3,6 @@ af.fast_track_multiplier=1
 
 # eBPF
 ro.bpf.kver_override=5.10.239
+
+# Display
+ro.surface_flinger.has_wide_color_display=true
