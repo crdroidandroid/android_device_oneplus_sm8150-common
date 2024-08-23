@@ -1,9 +1,0 @@
-java_library {
-    name: "oplus-fwk",
-    installable: true,
-
-    srcs: [
-        "src/**/*.aidl",
-        "src/**/*.java",
-    ],
-}
