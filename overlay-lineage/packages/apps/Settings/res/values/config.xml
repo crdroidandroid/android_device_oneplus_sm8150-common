@@ -17,4 +17,10 @@
     <!-- Show battery cycle count -->
     <bool name="config_show_battery_cycle_count" translatable="false">true</bool>
 
+    <!-- Show battery Design Capacity -->
+    <bool name="config_show_battery_design_capacity">true</bool>
+
+    <!-- Show battery Maximum Capacity -->
+    <bool name="config_show_battery_maximum_capacity">true</bool>
+
 </resources>
