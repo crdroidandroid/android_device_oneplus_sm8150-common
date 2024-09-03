@@ -275,7 +275,6 @@ PRODUCT_PACKAGES += \
 # Media
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
-    $(LOCAL_PATH)/configs/media/media_codecs_dolby_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_dolby_audio.xml \
     $(LOCAL_PATH)/configs/media/media_codecs_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml \
     $(LOCAL_PATH)/configs/media/media_codecs_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_vendor.xml \
     $(LOCAL_PATH)/configs/media/media_codecs_vendor_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_vendor_audio.xml
@@ -318,6 +317,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \
     libcodec2_hidl@1.0.vendor \
+    libcodec2_soft_common.vendor \
     libcodec2_vndk.vendor \
     libOmxAacEnc \
     libOmxAmrEnc \
@@ -329,11 +329,12 @@ PRODUCT_PACKAGES += \
     libOmxVenc \
     libOmxVidcCommon \
     libopus.vendor \
+    libsfplugin_ccodec_utils.vendor \
     libstagefright_amrnb_common.vendor \
     libstagefright_enc_common.vendor \
+    libstagefrighthw \
     libstagefright_softomx_plugin.vendor \
     libstagefright_softomx.vendor \
-    libstagefrighthw \
     libvorbisidec.vendor \
     libvpx.vendor
 
@@ -343,16 +344,12 @@ PRODUCT_COPY_FILES += \
 
 TARGET_EXCLUDES_AUDIOFX := true
 
+PRODUCT_PACKAGES += \
+    XiaomiDolby
+
 PRODUCT_COPY_FILES += \
     hardware/lineage/compat/vndk/v33/arm/libstagefright_foundation-v33.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_foundation-v33.so \
     hardware/lineage/compat/vndk/v33/arm64/libstagefright_foundation-v33.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstagefright_foundation-v33.so
-
-# Build codec2 packages
-PRODUCT_PACKAGES += \
-    libcodec2_hidl@1.0.vendor \
-    libcodec2_soft_common.vendor \
-    libstagefright_softomx.vendor \
-    libstagefright_softomx_plugin.vendor
 
 # Overlays
 $(call inherit-product, hardware/oplus/overlay/qssi/qssi.mk)

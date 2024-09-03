@@ -115,9 +115,6 @@ on late-fs
 
 on early-boot
     start vendor.sensors
-    # Dolby
-    mkdir /data/vendor/dolby 0770 media media
-    mkdir /data/vendor/multimedia 0775 system system
 
 on boot
     chown system system /sys/kernel/qvr_external_sensor/fd

@@ -16,6 +16,8 @@ vendor.audio_hal.in_period_size=144
 vendor.audio_hal.period_multiplier=3
 vendor.audio_hal.period_size=192
 vendor.audio.adm.buffering.ms=2
+vendor.audio.dolby.ds2.enabled=false
+vendor.audio.dolby.ds2.hardbypass=false
 vendor.audio.enable.mirrorlink=false
 vendor.audio.feature.a2dp_offload.enable=true
 vendor.audio.feature.afe_proxy.enable=true
@@ -111,13 +113,6 @@ vendor.camera.aux.packageexcludelist=org.telegram.messenger,org.thunderdog.chall
 # Crypto
 ro.crypto.volume.filenames_mode=aes-256-cts
 ro.crypto.allow_encrypt_override=true
-
-# Dolby
-ro.vendor.audio.dolby.dax.support=true
-ro.vendor.dolby.dax.version=DAX3_3.6.0.12_r1
-persist.vendor.audio_fx.current=dolby
-vendor.audio.dolby.ds2.enabled=true
-vendor.audio.dolby.ds2.hardbypass=true
 
 # Display
 debug.sf.disable_client_composition_cache=1

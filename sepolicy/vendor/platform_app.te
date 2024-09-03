@@ -2,6 +2,3 @@ allow platform_app sysfs_graphics:file r_file_perms;
 
 # For devices that not in Pixel series, add dummy domain and let it return null by selinux denial
 dontaudit platform_app hal_dummy_googlebattery_service:service_manager find;
-
-# Dolby
-get_prop(platform_app, audio_config_prop)
