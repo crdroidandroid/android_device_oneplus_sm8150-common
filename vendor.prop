@@ -181,6 +181,7 @@ ro.incremental.enable=yes
 # LMKD/PSI
 ro.lmk.kill_heaviest_task=true
 ro.lmk.kill_timeout_ms=15
+ro.lmk.use_minfree_levels=true
 
 # Netflix
 ro.netflix.bsp_rev=Q855-16947-1
