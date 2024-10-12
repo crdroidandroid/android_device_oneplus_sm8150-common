@@ -532,7 +532,9 @@ PRODUCT_PACKAGES += \
     libnl \
     libpng.vendor:32 \
     libprocessgroup.vendor:32 \
-    libwfdaac_vendor
+    libwfdaac_vendor \
+    libgui_shim \
+    libinput_shim
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
