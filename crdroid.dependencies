@@ -1,0 +1,15 @@
+[
+  {
+    "repository": "crdroidandroid/android_kernel_oneplus_sm8150",
+    "target_path": "kernel/oneplus/sm8150"
+  },
+  {
+    "repository": "crdroidandroid/android_hardware_oplus",
+    "target_path": "hardware/oplus",
+    "branch": "16.0-extras"
+  },
+  {
+    "repository": "crdroidandroid/proprietary_vendor_oneplus_sm8150-common",
+    "target_path": "vendor/oneplus/sm8150-common"
+  }
+]
