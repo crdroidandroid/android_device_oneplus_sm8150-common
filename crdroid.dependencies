@@ -11,6 +11,6 @@
   {
     "repository": "crdroidandroid/proprietary_vendor_oneplus_sm8150-common",
     "target_path": "vendor/oneplus/sm8150-common",
-    "branch": "15.0-hotdog"
+    "branch": "15.0"
   }
 ]
