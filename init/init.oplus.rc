@@ -37,6 +37,22 @@ on boot
     chown system system /sys/kernel/oplus_display/notify_fppress
     chown system system /sys/kernel/oplus_display/panel_serial_number
 
+    # Leds
+    chown system system /sys/class/leds/led:torch_0/brightness
+    chmod 0666 /sys/class/leds/led:torch_0/brightness
+    chown system system /sys/class/leds/led:torch_1/brightness
+    chmod 0666 /sys/class/leds/led:torch_1/brightness
+    chown system system /sys/class/leds/led:switch_0/brightness
+    chmod 0666 /sys/class/leds/led:switch_0/brightness
+    chown system system /sys/class/leds/led:switch_1/brightness
+    chmod 0666 /sys/class/leds/led:switch_1/brightness
+    chown system system /sys/class/leds/led:switch_2/brightness
+    chmod 0666 /sys/class/leds/led:switch_2/brightness
+    chown system system /sys/class/leds/led:torch_2/brightness
+    chmod 0666 /sys/class/leds/led:torch_2/brightness
+    chown system system /sys/class/leds/led:switch_3/brightness
+    chmod 0666 /sys/class/leds/led:switch_3/brightness
+
     # Motor
     chown system system /sys/class/motor/direction
     chown system system /sys/class/motor/enable
