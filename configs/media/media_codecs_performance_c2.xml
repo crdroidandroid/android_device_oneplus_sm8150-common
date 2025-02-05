@@ -114,4 +114,5 @@ limitations under the License.
             <Limit name="measured-frame-rate-1280x760" range="95-200" />
         </MediaCodec>
     </Decoders>
+    <Include href="media_codecs_dolby_audio.xml" />
 </MediaCodecs>
