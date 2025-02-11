@@ -1,1 +1,2 @@
 allow hal_camera_default sysfs:file r_file_perms;
+dontaudit hal_camera_default default_prop:file r_file_perms;
