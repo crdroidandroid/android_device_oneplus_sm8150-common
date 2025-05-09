@@ -171,6 +171,10 @@ debug.hwui.target_cpu_time_percent=30
 # Incremental FS
 ro.incremental.enable=yes
 
+# Logging
+persist.log.tag.QC2Buf=W
+persist.log.tag.QC2V4l2Codec=E
+
 # Media
 debug.stagefright.c2inputsurface=-1
 vendor.media.omx=0
