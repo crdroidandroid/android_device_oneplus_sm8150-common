@@ -15,4 +15,7 @@
     <!-- Preferred max refresh rate at keyguard, if supported by the display. -->
     <integer name="config_keyguardMaxRefreshRate">60</integer>
 
+    <!-- Reducing margin bottom to display charging infos below the udfps icon -->
+    <dimen name="keyguard_indication_margin_bottom">24dp</dimen>
+
 </resources>
