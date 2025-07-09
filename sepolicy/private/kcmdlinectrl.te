@@ -1,0 +1,2 @@
+allow kcmdlinectrl sysfs_dt_firmware_android:file { getattr open read };
+allow kcmdlinectrl sysfs_dt_firmware_android:dir { open read };
