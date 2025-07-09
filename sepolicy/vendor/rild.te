@@ -1,2 +1,4 @@
-dontaudit rild cache_file:lnk_file r_file_perms;
+dontaudit rild cache_file:lnk_file { r_file_perms create write };
+dontaudit rild cache_file:dir { add_name getattr write };
+dontaudit rild cache_file:file { create rw_file_perms };
 dontaudit rild default_prop:file r_file_perms;
