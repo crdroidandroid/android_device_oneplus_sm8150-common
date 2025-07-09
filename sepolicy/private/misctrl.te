@@ -1,0 +1,2 @@
+allow misctrl sysfs_dt_firmware_android:file { getattr open read };
+allow misctrl sysfs_dt_firmware_android:dir { open read };
