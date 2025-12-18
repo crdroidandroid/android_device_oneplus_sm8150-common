@@ -91,6 +91,9 @@ TARGET_KERNEL_CONFIG := \
     vendor/sm8150-perf_defconfig \
     vendor/oplus.config
 TARGET_KERNEL_SOURCE := kernel/oneplus/sm8150
+TARGET_KERNEL_CLANG_VERSION := r574158
+TARGET_KERNEL_LLVM_BINUTILS := 1
+TARGET_KERNEL_ARCH := arm64
 
 # Kernel modules - WLAN
 TARGET_MODULE_ALIASES += \
