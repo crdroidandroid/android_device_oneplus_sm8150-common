@@ -26,9 +26,6 @@
     <!-- Whether device supports USB2.0 Force Fastcharge -->
     <bool name="config_deviceSupportsUSB2FC">true</bool>
 
-    <!-- Whether device supports System vibration intensity -->
-    <bool name="config_deviceSupportsSysVib">true</bool>
-
     <!-- Whether device supports Dolby -->
     <bool name="config_deviceSupportsDolby">true</bool>
 

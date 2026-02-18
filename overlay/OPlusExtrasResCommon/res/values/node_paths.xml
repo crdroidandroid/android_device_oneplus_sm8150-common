@@ -25,7 +25,4 @@
     <string name="node_usb2_fast_charge_mode_switch_true">1</string>
     <string name="node_usb2_fast_charge_mode_switch_false">0</string>
 
-    <!-- System vibration sysfs node path -->
-    <string name="node_vibrator_strength_preference">/sys/devices/platform/soc/89c000.i2c/i2c-2/2-005a/leds/vibrator/level</string>
-
 </resources>
