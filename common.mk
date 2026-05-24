@@ -142,7 +142,7 @@ PRODUCT_PACKAGES += \
 
 # Dolby
 PRODUCT_PACKAGES += \
-    DolbyAtmos
+    LunarisDolby
 
 # Doze
 PRODUCT_PACKAGES += \
