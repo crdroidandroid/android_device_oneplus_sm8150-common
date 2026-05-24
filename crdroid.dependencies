@@ -14,6 +14,10 @@
     "target_path": "kernel/oneplus/sm8150"
   },
   {
+    "repository": "crdroidandroid/android_packages_apps_LunarisDolby",
+    "target_path": "packages/apps/LunarisDolby"
+  },
+  {
     "repository": "crdroidandroid/proprietary_vendor_oneplus_sm8150-common",
     "target_path": "vendor/oneplus/sm8150-common"
   }
