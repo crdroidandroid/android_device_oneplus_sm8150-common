@@ -1,0 +1,10 @@
+--- a/vppservice.rc
++++ b/vppservice.rc
+@@ -17,3 +17,4 @@ service vendor.vppservice /vendor/bin/vppservice
+ 
+     # start only when requested (uncomment below to disable service at boot)
+     # disabled
++    setenv ADSP_LIBRARY_PATH "/vendor/lib/rfsa/adsp;/odm/lib/rfsa/adsp;/system/vendor/lib/rfsa/adsp;/vendor/dsp"
+-- 
+2.53.0
+
