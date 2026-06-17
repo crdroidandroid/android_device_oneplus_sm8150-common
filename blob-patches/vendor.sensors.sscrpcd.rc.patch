@@ -1,0 +1,7 @@
+--- a/vendor.sensors.sscrpcd.rc
++++ b/vendor.sensors.sscrpcd.rc
+@@ -35,3 +35,4 @@ service vendor.sensors /vendor/bin/sscrpcd sensorspd
+     group system wakelock
+     capabilities BLOCK_SUSPEND
+     shutdown critical
++    setenv ADSP_LIBRARY_PATH "/vendor/lib/rfsa/adsp;/odm/lib/rfsa/adsp;/system/vendor/lib/rfsa/adsp;/vendor/dsp"
