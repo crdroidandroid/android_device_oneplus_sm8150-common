@@ -48,6 +48,8 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libshims_fingerprint.oplus.so'),
     'odm/etc/vintf/manifest/manifest_oplus_fingerprint.xml': blob_fixup()
         .patch_file('blob-patches/manifest_oplus_fingerprint.patch'),
+    'vendor/etc/init/vendor.qti.adsprpc-service.rc': blob_fixup()
+        .patch_file('blob-patches/vendor.qti.adsprpc-service.rc.patch'),
     ('odm/lib64/mediadrm/libwvdrmengine.so', 'odm/lib64/libwvhidl.so'): blob_fixup()
         .add_needed('libcrypto_shim.so'),
     ('odm/lib64/libarcsoft_dualcam_refocus_preview.so', 'vendor/lib64/libarcsoft_super_night_raw.so'): blob_fixup()
