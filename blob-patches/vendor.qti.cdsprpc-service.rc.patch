@@ -1,0 +1,10 @@
+--- a/vendor.qti.cdsprpc-service.rc
++++ b/vendor.qti.cdsprpc-service.rc
+@@ -35,6 +35,7 @@ service vendor.cdsprpcd /vendor/bin/cdsprpcd
+    class main
+    user system
+    group system
++   setenv ADSP_LIBRARY_PATH "/vendor/lib/rfsa/adsp;/odm/lib/rfsa/adsp;/system/vendor/lib/rfsa/adsp;/vendor/dsp"
+ 
+ on property:vendor.fastrpc.disable.cdsprpcd.daemon=1
+    stop vendor.cdsprpcd
