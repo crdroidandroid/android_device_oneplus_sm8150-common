@@ -108,9 +108,6 @@ on late-fs
 on post-fs-data
     mkdir /data/vendor/audio/ultrasound 0770 audioserver audio
 
-on early-boot
-    start vendor.sensors
-
 on boot
     chown system system /sys/kernel/qvr_external_sensor/fd
 
