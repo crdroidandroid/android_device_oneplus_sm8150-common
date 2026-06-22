@@ -82,6 +82,7 @@ service oplus-sh /odm/bin/init.oplus.sh
     user root
     group root
     oneshot
+    disabled
 
 service oplus-wifi-sh /odm/bin/init.oplus.wifi.sh
     class core
