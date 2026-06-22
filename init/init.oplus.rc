@@ -82,6 +82,7 @@ service oplus-sh /odm/bin/init.oplus.sh
     user root
     group root
     oneshot
+    disabled
 
 service oplus-hall-sh /odm/bin/init.oplus.hall.sh
     class late_start
