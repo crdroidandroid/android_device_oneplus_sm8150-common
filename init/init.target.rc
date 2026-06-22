@@ -91,9 +91,6 @@ on init
     wait /dev/block/platform/soc/1d84000.ufshc
     symlink /dev/block/platform/soc/1d84000.ufshc /dev/block/bootdevice
 
-on early-fs
-    start vold
-
 on fs
     mount_all /vendor/etc/fstab.qcom --early
     chown root system /mnt/vendor/persist
