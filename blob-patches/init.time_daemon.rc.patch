@@ -1,0 +1,7 @@
+--- a/init.time_daemon.rc
++++ b/init.time_daemon.rc
+@@ -12,3 +12,4 @@ service time_daemon /vendor/bin/time_daemon
+     user system
+     group system
+     capabilities SYS_TIME
++    disabled
