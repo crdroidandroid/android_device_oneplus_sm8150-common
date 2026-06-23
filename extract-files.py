@@ -58,6 +58,14 @@ blob_fixups: blob_fixups_user_type = {
         .patch_file('blob-patches/vppservice.rc.patch'),
     'vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc.patch': blob_fixup()
         .patch_file('blob-patches/android.hardware.gatekeeper@1.0-service-qti.rc.patch'),
+    'vendor/etc/init/android.hardware.keymaster@4.0-service-qti.rc': blob_fixup()
+        .patch_file('blob-patches/android.hardware.keymaster@4.0-service-qti.rc.patch'),
+    'vendor/etc/init/init.time_daemon.rc': blob_fixup()
+        .patch_file('blob-patches/init.time_daemon.rc.patch'),
+    'vendor/etc/init/qseecomd.rc': blob_fixup()
+        .patch_file('blob-patches/qseecomd.rc.patch'),
+    'vendor/etc/init/vendor.qti.hardware.qseecom@1.0-service.rc': blob_fixup()
+        .patch_file('blob-patches/vendor.qti.hardware.qseecom@1.0-service.rc.patch'),
     ('odm/lib64/mediadrm/libwvdrmengine.so', 'odm/lib64/libwvhidl.so'): blob_fixup()
         .add_needed('libcrypto_shim.so'),
     ('odm/lib64/libarcsoft_dualcam_refocus_preview.so', 'vendor/lib64/libarcsoft_super_night_raw.so'): blob_fixup()

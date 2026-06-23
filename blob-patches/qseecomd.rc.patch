@@ -1,0 +1,7 @@
+--- a/qseecomd.rc
++++ b/qseecomd.rc
+@@ -10,3 +10,4 @@ service vendor.qseecomd /vendor/bin/qseecomd
+     class core
+     user root
+     group root
++    disabled
