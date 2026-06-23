@@ -56,6 +56,8 @@ blob_fixups: blob_fixups_user_type = {
         .patch_file('blob-patches/vendor.sensors.sscrpcd.rc.patch'),
     'vendor/etc/init/vppservice.rc': blob_fixup()
         .patch_file('blob-patches/vppservice.rc.patch'),
+    'vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc.patch': blob_fixup()
+        .patch_file('blob-patches/android.hardware.gatekeeper@1.0-service-qti.rc.patch'),
     ('odm/lib64/mediadrm/libwvdrmengine.so', 'odm/lib64/libwvhidl.so'): blob_fixup()
         .add_needed('libcrypto_shim.so'),
     ('odm/lib64/libarcsoft_dualcam_refocus_preview.so', 'vendor/lib64/libarcsoft_super_night_raw.so'): blob_fixup()
