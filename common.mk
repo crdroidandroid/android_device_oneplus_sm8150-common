@@ -105,10 +105,6 @@ TARGET_BUILD_DEVICE_AS_WEBCAM := true
 
 $(call soong_config_set,libcameraservice,ext_lib,//$(LOCAL_PATH):libcameraservice_extension.opsm8150)
 
-# Configstore
-PRODUCT_PACKAGES += \
-    disable_configstore
-
 # Dalvik
 $(call inherit-product, frameworks/native/build/phone-xhdpi-8192-dalvik-heap.mk)
 
