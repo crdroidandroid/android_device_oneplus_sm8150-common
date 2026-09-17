@@ -5,6 +5,8 @@ app_domain(camera_helper_app)
 allow camera_helper_app app_api_service:service_manager find;
 allow camera_helper_app cameraserver_service:service_manager find;
 
+allow camera_helper_app system_app_data_file:file setattr;
+
 rw_dir_file(camera_helper_app, sysfs_motor)
 rw_dir_file(camera_helper_app, system_app_data_file)
 
