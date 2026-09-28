@@ -6,7 +6,7 @@
   {
     "repository": "crdroidandroid/android_hardware_oplus",
     "target_path": "hardware/oplus",
-    "branch": "16.0-extras"
+    "branch": "17.0-extras"
   },
   {
     "repository": "crdroidandroid/android_packages_apps_LunarisDolby",
