@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <carrier_config_list>
     <carrier_config>
+        <!-- Data stall recovery: skip RECOVERY_ACTION_CLEANUP (index 1).
+             CLEANUP tears down the internet data network, after which
+             DataStallRecoveryManager.isRecoveryNeeded() refuses every later
+             action with "skip data stall recovery as data not connected".
+             Recovery then deadlocks and cellular data stays down until a
+             reboot. Skipping CLEANUP advances straight to RADIO_RESTART,
+             which rebuilds the data path. Index 2 (unused) keeps the AOSP
+             default; indices 3/4 (RADIO_RESTART/RESET_MODEM) stay enabled. -->
+        <boolean-array name="data_stall_recovery_should_skip_bool_array" num="5">
+            <item value="false" />
+            <item value="true" />
+            <item value="true" />
+            <item value="false" />
+            <item value="false" />
+        </boolean-array>
         <boolean name="apn_expand_bool" value="true" />
         <boolean name="world_phone_bool" value="true" />
         <boolean name="allow_adding_apns_bool" value="true" />
