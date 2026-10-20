@@ -158,4 +158,7 @@
          keyboard vibration will follow config_defaultHapticFeedbackIntensity -->
     <integer name="config_defaultKeyboardVibrationIntensity">3</integer>
 
+    <!-- Path to fast charging status file to detect whether an oem fast charger is active -->
+    <string name="config_oemFastChargerStatusPath" translatable="false">/sys/devices/virtual/oplus_chg/battery/voocchg_ing</string>
+
 </resources>
