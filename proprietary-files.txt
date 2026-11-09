@@ -458,7 +458,6 @@ odm/lib64/libgf_ud_hal_18821_G2_4_oplus.so
 odm/lib64/libgf_ud_hal_18857_G2_4_oplus.so
 odm/lib64/libgf_ud_hal_18865_G3_oplus.so
 odm/lib64/libgf_ud_hal_20801_G3_oplus.so
-odm/lib64/vendor.oplus.hardware.commondcs@1.0.so
 
 # Gatekeeper
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
